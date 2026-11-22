@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="dark"] {
+  --bg-canvas: #111813;
+  --surface-chrome: #18201b;
+  --surface-chrome-control: #263128;
+  --border-chrome: #344036;
+
+  --surface-card: #1d261f;
+  --surface-subtle: #263128;
+  --border-default: #374438;
+
+  --surface-navigation-active: #2d3c25;
+  --surface-current-question: #2d3c25;
+  --surface-category: #2c3a26;
+  --text-category: #c0d998;
+
+  --surface-feature: #203326;
+  --surface-feature-control: #354b39;
+  --border-feature: #4a5c47;
+  --text-feature-tag: #e6eddf;
+  --text-feature-heading: #f9fcf2;
+  --text-feature-muted: #bfcfbb;
+  --text-feature-caption: #d2ddcb;
+  --text-feature-control: #f8fcf2;
+
+  --surface-advice: #253322;
+  --border-advice: #3b4b31;
+  --text-advice: #b8c6ac;
+  --text-advice-index: #aec291;
+
+  --surface-success: #2d3c25;
+  --text-success: #c1de96;
+  --text-completed: #c1de96;
+  --text-steady: #c1de96;
+
+  --surface-warning: #3b3323;
+  --text-warning: #e6c782;
+  --text-caution: #e6c782;
+
+  --surface-fix: #2e3e25;
+  --text-fix-label: #c0da94;
+
+  --accent-lime: #d9f279;
+  --accent-lime-hover: #e3f796;
+  --brand-mark: #b3d56e;
+  --indicator-progress: #b8d973;
+  --indicator-step-active: #b8d973;
+  --indicator-completed: #b8d973;
+  --indicator-score-track: #52634d;
+  --indicator-wave-muted: #60745c;
+
+  --text-primary: #eaf0e5;
+  --text-secondary: #adb8a6;
+  --text-nav-secondary: #aab5a4;
+  --text-body: #bdc8b5;
+  --text-input: #bdc8b5;
+  --text-tertiary: #a0ad97;
+  --text-list-index: #a3b58a;
+  --text-on-lime: #202a24;
+  --text-recording: #e2f3ce;
+  --text-mic-feedback: #c9d9c0;
+  --text-score-unit: #b8c9b2;
+  --text-score-caption: #d0ddc9;
+  --text-score-label: #c2d2ba;
+  --text-score-value: #fbfff4;
+
+  --appearance-track: #111813;
+  --appearance-light-bg: #111813;
+  --appearance-light-text: #adb8a6;
+  --appearance-dark-bg: #d9f279;
+  --appearance-dark-text: #202a24;
+}
+
+[data-theme="light"] {
+  --bg-canvas: #f4f6f0;
+  --surface-chrome: #ebefe6;
+  --surface-chrome-control: #dfe6d8;
+  --border-chrome: #d2dacb;
+
+  --surface-card: #ffffff;
+  --surface-subtle: #f0f4eb;
+  --border-default: #d6dfd0;
+
+  --surface-navigation-active: #dce8ce;
+  --surface-current-question: #e3eed6;
+  --surface-category: #e4efda;
+  --text-category: #355423;
+
+  --surface-feature: #1f3325;
+  --surface-feature-control: #354b39;
+  --border-feature: #4a5c47;
+  --text-feature-tag: #e6eddf;
+  --text-feature-heading: #f9fcf2;
+  --text-feature-muted: #bfcfbb;
+  --text-feature-caption: #d2ddcb;
+  --text-feature-control: #f8fcf2;
+
+  --surface-advice: #ebf1e3;
+  --border-advice: #d2dec5;
+  --text-advice: #495944;
+  --text-advice-index: #56733b;
+
+  --surface-success: #e2efd4;
+  --text-success: #2f571d;
+  --text-completed: #3b6926;
+  --text-steady: #3b6926;
+
+  --surface-warning: #f6ecd7;
+  --text-warning: #8a6416;
+  --text-caution: #946a14;
+
+  --surface-fix: #e5f0d8;
+  --text-fix-label: #355a20;
+
+  --accent-lime: #d9f279;
+  --accent-lime-hover: #cde965;
+  --brand-mark: #6f9e2e;
+  --indicator-progress: #78a836;
+  --indicator-step-active: #78a836;
+  --indicator-completed: #78a836;
+  --indicator-score-track: #52634d;
+  --indicator-wave-muted: #60745c;
+
+  --text-primary: #18211b;
+  --text-secondary: #566357;
+  --text-nav-secondary: #586659;
+  --text-body: #323f35;
+  --text-input: #2c382e;
+  --text-tertiary: #6a776b;
+  --text-list-index: #5a7542;
+  --text-on-lime: #1b241e;
+  --text-recording: #e2f3ce;
+  --text-mic-feedback: #c9d9c0;
+  --text-score-unit: #b8c9b2;
+  --text-score-caption: #d0ddc9;
+  --text-score-label: #c2d2ba;
+  --text-score-value: #fbfff4;
+
+  --appearance-track: #dfe6d8;
+  --appearance-light-bg: #1f3325;
+  --appearance-light-text: #f6faf0;
+  --appearance-dark-bg: transparent;
+  --appearance-dark-text: #566357;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}

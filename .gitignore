@@ -1,0 +1,38 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Secrets & Environment Files (NEVER commit real keys)
+.env
+*.env
+.env.*
+backend/.env
+frontend/.env.local
+!*.env.example
+!.env.example
+
+# Local SQLite & Databases
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backend/rehearse.db*
+
+# Next.js & Node
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/tsconfig.tsbuildinfo
+npm-debug.log*
+
+# OS & Logs
+.DS_Store
+Thumbs.db
+*.log
